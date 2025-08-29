@@ -1,12 +1,83 @@
-# React + Vite
+# Atividade 5 — React + OMDb
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+App em **React (Vite)** que usa a API do **OMDb** para **buscar filmes**, **ver detalhes** e **salvar favoritos** no **localStorage**.
 
-Currently, two official plugins are available:
+## Funcionalidades
+- **Busca** por título (lista com **pôster, título, ano** e botão **Detalhes**)
+- **Paginação** dos resultados
+- **Página de detalhes** (Diretor, Elenco, Sinopse/Plot, Avaliação/IMDb)
+- **Favoritos** (adicionar/remover, persistência em `localStorage`)
+- **Loading & Erros** (indicador e mensagens amigáveis)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Como rodar
+```bash
+npm install
+npm run dev
+# opcional:
+# npm run build && npm run preview
+Configuração da API (OMDb)
+Gere sua API Key em https://www.omdbapi.com/
 
-## Expanding the ESLint configuration
+Crie um arquivo .env na raiz do projeto (não enviar para o Git):
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+env
+Copiar código
+VITE_OMDB_API_KEY=SUACHAVEAQUI
+VITE_OMDB_BASE_URL=https://www.omdbapi.com/
+Reinicie o servidor (npm run dev) após criar/alterar o .env.
+
+Endpoints usados
+Busca: /?s=<termo>&page=<n>&apikey=<KEY> → retorna Search[] e totalResults
+
+Detalhes: /?i=<imdbID>&plot=full&apikey=<KEY> → Director, Actors, Plot, imdbRating, etc.
+
+Estrutura do projeto
+lua
+Copiar código
+src/
+  api/
+    omdb.js
+  assets/
+  components/
+    MovieCards.jsx
+    Pagination.jsx
+  context/
+    FavoritesContext.jsx
+  hooks/
+    useLocalStorage.js
+  pages/
+  App.jsx
+  main.jsx
+  styles.css
+.env           # (local; não versionar)
+.gitignore
+eslint.config.js
+index.html
+package.json
+Dicas rápidas
+Em projetos Vite, variáveis precisam começar com VITE_.
+
+Calcule a paginação com totalResults (10 por página no OMDb).
+
+Guarde os favoritos no localStorage (ex.: chave @movies/favorites).
+
+Se aparecer Invalid API key: revise a key, o prefixo VITE_ e o .env.
+
+Checklist
+ Busca funcionando (pôster, título, ano, botão de detalhes)
+
+ Paginação entre páginas
+
+ Detalhes completos (diretor, elenco, sinopse, avaliação)
+
+ Favoritar/desfavoritar com localStorage
+
+ Loading e mensagens de erro
+
+ .env configurado e ignorado no Git
+
+ README atualizado (este arquivo)
+
+makefile
+Copiar código
+::contentReference[oaicite:0]{index=0}
