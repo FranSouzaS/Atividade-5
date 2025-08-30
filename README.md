@@ -40,26 +40,31 @@ Detalhes: /?i=<imdbID>&plot=full&apikey=<KEY> → Director, Actors, Plot, imdbRa
 ## Estrutura do projeto
 
 
-- src/
--  api/
--    omdb.js
--  assets/
--  components/
--    MovieCards.jsx
--    Pagination.jsx
--  context/
--    FavoritesContext.jsx
--  hooks/
--    useLocalStorage.js
--  pages/
--  App.jsx
--  main.jsx
--  styles.css
-- .env            # (local; não versionar)
-- .gitignore
-- eslint.config.js
-- index.html
-- package.json
+## Estrutura do Projeto
+
+`text`
+.
+├─ src/
+│  ├─ api/
+│  │  └─ omdb.js               # funções para consumir a API OMDb
+│  ├─ assets/                  # imagens, ícones, fontes
+│  ├─ components/              # componentes reutilizáveis
+│  │  ├─ MovieCards.jsx
+│  │  └─ Pagination.jsx
+│  ├─ context/
+│  │  └─ FavoritesContext.jsx  # contexto de favoritos
+│  ├─ hooks/
+│  │  └─ useLocalStorage.js    # hook para persistir no localStorage
+│  ├─ pages/                   # páginas (Home, Details, Favorites, ...)
+│  ├─ App.jsx
+│  ├─ main.jsx
+│  └─ styles.css               # estilos globais
+├─ .env                        # variáveis locais (NÃO versionar)
+├─ .gitignore
+├─ eslint.config.js
+├─ index.html
+└─ package.json
+
 
 
 ## Dicas rápidas
