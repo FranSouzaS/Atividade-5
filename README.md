@@ -15,10 +15,12 @@ App em **React (Vite)** que usa a API do **OMDb** para **buscar filmes**, **ver 
 
 bash
 npm install
-npm run dev```
+npm run dev
+
+---
 
 # opcional:
-# npm run build && npm run preview
+npm run build && npm run preview
 Configuração da API (OMDb)
 Gere sua API Key em https://www.omdbapi.com/
 
