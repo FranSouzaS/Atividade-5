@@ -38,26 +38,26 @@ Detalhes: /?i=<imdbID>&plot=full&apikey=<KEY> → Director, Actors, Plot, imdbRa
 ## Estrutura do projeto
 
 
-src/
-  api/
-    omdb.js
-  assets/
-  components/
-    MovieCards.jsx
-    Pagination.jsx
-  context/
-    FavoritesContext.jsx
-  hooks/
-    useLocalStorage.js
-  pages/
-  App.jsx
-  main.jsx
-  styles.css
-.env           # (local; não versionar)
-.gitignore
-eslint.config.js
-index.html
-package.json
+- src/
+-  api/
+-    omdb.js
+-  assets/
+-  components/
+-    MovieCards.jsx
+-    Pagination.jsx
+-  context/
+-    FavoritesContext.jsx
+-  hooks/
+-    useLocalStorage.js
+-  pages/
+-  App.jsx
+-  main.jsx
+-  styles.css
+- .env            # (local; não versionar)
+- .gitignore
+- eslint.config.js
+- index.html
+- package.json
 
 
 ## Dicas rápidas
@@ -71,18 +71,18 @@ Guarde os favoritos no localStorage (ex.: chave @movies/favorites).
 Se aparecer Invalid API key: revise a key, o prefixo VITE_ e o .env.
 
 ## Checklist
- Busca funcionando (pôster, título, ano, botão de detalhes)
+- Busca funcionando (pôster, título, ano, botão de detalhes)
 
- Paginação entre páginas
+- Paginação entre páginas
 
- Detalhes completos (diretor, elenco, sinopse, avaliação)
+- Detalhes completos (diretor, elenco, sinopse, avaliação)
 
- Favoritar/desfavoritar com localStorage
+- Favoritar/desfavoritar com localStorage
 
- Loading e mensagens de erro
+- Loading e mensagens de erro
 
- .env configurado e ignorado no Git
+- .env configurado e ignorado no Git
 
- README atualizado (este arquivo)
+- README atualizado (este arquivo)
 
 
