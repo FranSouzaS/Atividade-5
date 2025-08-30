@@ -1,18 +1,22 @@
-# Atividade 5 — React + OMDb
+# Atividade 5 - React + OMDB
 
 App em **React (Vite)** que usa a API do **OMDb** para **buscar filmes**, **ver detalhes** e **salvar favoritos** no **localStorage**.
 
 ## Funcionalidades
+
 - **Busca** por título (lista com **pôster, título, ano** e botão **Detalhes**)
 - **Paginação** dos resultados
 - **Página de detalhes** (Diretor, Elenco, Sinopse/Plot, Avaliação/IMDb)
 - **Favoritos** (adicionar/remover, persistência em `localStorage`)
 - **Loading & Erros** (indicador e mensagens amigáveis)
 
-## Como rodar
-```bash
+
+### Como rodar 
+
+bash
 npm install
-npm run dev
+npm run dev```
+
 # opcional:
 # npm run build && npm run preview
 Configuração da API (OMDb)
@@ -31,9 +35,9 @@ Busca: /?s=<termo>&page=<n>&apikey=<KEY> → retorna Search[] e totalResults
 
 Detalhes: /?i=<imdbID>&plot=full&apikey=<KEY> → Director, Actors, Plot, imdbRating, etc.
 
-Estrutura do projeto
-lua
-Copiar código
+## Estrutura do projeto
+
+
 src/
   api/
     omdb.js
@@ -54,7 +58,10 @@ src/
 eslint.config.js
 index.html
 package.json
-Dicas rápidas
+
+
+## Dicas rápidas
+
 Em projetos Vite, variáveis precisam começar com VITE_.
 
 Calcule a paginação com totalResults (10 por página no OMDb).
@@ -63,7 +70,7 @@ Guarde os favoritos no localStorage (ex.: chave @movies/favorites).
 
 Se aparecer Invalid API key: revise a key, o prefixo VITE_ e o .env.
 
-Checklist
+## Checklist
  Busca funcionando (pôster, título, ano, botão de detalhes)
 
  Paginação entre páginas
@@ -78,6 +85,4 @@ Checklist
 
  README atualizado (este arquivo)
 
-makefile
-Copiar código
-::contentReference[oaicite:0]{index=0}
+
