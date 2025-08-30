@@ -37,36 +37,6 @@ Busca: /?s=<termo>&page=<n>&apikey=<KEY> → retorna Search[] e totalResults
 
 Detalhes: /?i=<imdbID>&plot=full&apikey=<KEY> → Director, Actors, Plot, imdbRating, etc.
 
-## Estrutura do projeto
-
-
-## Estrutura do Projeto
-
-`text`
-.
-├─ src/
-│  ├─ api/
-│  │  └─ omdb.js               # funções para consumir a API OMDb
-│  ├─ assets/                  # imagens, ícones, fontes
-│  ├─ components/              # componentes reutilizáveis
-│  │  ├─ MovieCards.jsx
-│  │  └─ Pagination.jsx
-│  ├─ context/
-│  │  └─ FavoritesContext.jsx  # contexto de favoritos
-│  ├─ hooks/
-│  │  └─ useLocalStorage.js    # hook para persistir no localStorage
-│  ├─ pages/                   # páginas (Home, Details, Favorites, ...)
-│  ├─ App.jsx
-│  ├─ main.jsx
-│  └─ styles.css               # estilos globais
-├─ .env                        # variáveis locais (NÃO versionar)
-├─ .gitignore
-├─ eslint.config.js
-├─ index.html
-└─ package.json
-
-
-
 ## Dicas rápidas
 
 Em projetos Vite, variáveis precisam começar com VITE_.
